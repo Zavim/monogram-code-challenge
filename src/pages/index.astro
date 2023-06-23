@@ -10,20 +10,31 @@
     <title>Astro</title>
   </head>
   <body>
-    <h1>jamstack</h1>
-    <span>100</span>
-    <p>
-      Search engines, business stakeholders, and end-users gauge a website’s
-      value using metric tools like Google Lighthouse, which measures site
-      performance, SEO, and accessibility. Performance is one of the most
-      difficult scores to get to 100. This is especially true in a time when
-      users demand JavaScript-heavy, highly-interactive web experiences. A
-      Jamstack website, delivering SEO-friendly, lean & clean HTML in
-      milliseconds, promises higher search-engine ranking and a more positive,
-      responsive end-user experience.
-    </p>
-    <div class="mid-dark-section dark"></div>
-    <div class="bottom-dark-section dark"></div>
+    <main>
+      <div class="hero-container">
+        <h1 class="section-header">jamstack</h1>
+      </div>
+      <div class="orange-square-container">
+        <h2 class="section-header white-text centered-text">javascript</h2>
+      </div>
+      <!-- <p>
+        Search engines, business stakeholders, and end-users gauge a website’s
+        value using metric tools like Google Lighthouse, which measures site
+        performance, SEO, and accessibility. Performance is one of the most
+        difficult scores to get to 100. This is especially true in a time when
+        users demand JavaScript-heavy, highly-interactive web experiences. A
+        Jamstack website, delivering SEO-friendly, lean & clean HTML in
+        milliseconds, promises higher search-engine ranking and a more positive,
+        responsive end-user experience.
+      </p> -->
+      <div class="mid-dark-section dark">
+        <h2 class="section-header white-text centered-text">api</h2>
+      </div>
+      <div class="markup-container">
+        <h2 class="section-header">markup</h2>
+      </div>
+      <div class="bottom-dark-section dark"></div>
+    </main>
   </body>
 </html>
 
@@ -52,15 +63,20 @@
   * {
     margin: 0;
   }
-  body {
+  /* body {
     height: 8057px;
-  }
+  } */
+  /* main {
+    width: min(1280px, 100% - 2rem);
+    margin-inline: auto;
+  } */
   img,
   svg {
     max-width: 100%;
     display: block;
   }
-  h1 {
+  h1,
+  h2 {
     font-family: "Inter Black", sans-serif;
   }
   span {
@@ -68,6 +84,30 @@
   }
   p {
     font-family: "Inter Light", sans-serif;
+  }
+  .section-header {
+    font-size: 8.3215rem;
+    padding-top: 5.81rem;
+  }
+  .white-text {
+    color: #fff;
+  }
+  .centered-text {
+    text-align: center;
+  }
+  .hero-container {
+    width: 93.5%;
+    padding-left: min(126px, 8%);
+  }
+  .orange-square-container {
+    margin: auto;
+    min-height: 893px;
+    width: 92%;
+    background-color: orange;
+  }
+  .markup-container {
+    width: 100%;
+    min-height: 78.6875rem;
   }
   .dark {
     background-color: #151515;
