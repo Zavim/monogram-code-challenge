@@ -2,14 +2,82 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>jamstack</h1>
+    <span>100</span>
+    <p>
+      Search engines, business stakeholders, and end-users gauge a website’s
+      value using metric tools like Google Lighthouse, which measures site
+      performance, SEO, and accessibility. Performance is one of the most
+      difficult scores to get to 100. This is especially true in a time when
+      users demand JavaScript-heavy, highly-interactive web experiences. A
+      Jamstack website, delivering SEO-friendly, lean & clean HTML in
+      milliseconds, promises higher search-engine ranking and a more positive,
+      responsive end-user experience.
+    </p>
+    <div class="mid-dark-section dark"></div>
+    <div class="bottom-dark-section dark"></div>
+  </body>
 </html>
+
+<style>
+  @font-face {
+    font-family: "Inter Black";
+    src: url("/fonts/Inter-Black.woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter Bold";
+    src: url("/fonts/Inter-Bold.woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter Light";
+    src: url("/fonts/Inter-Light.woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    height: 8057px;
+  }
+  img,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+  h1 {
+    font-family: "Inter Black", sans-serif;
+  }
+  span {
+    font-family: "Inter Bold", sans-serif;
+  }
+  p {
+    font-family: "Inter Light", sans-serif;
+  }
+  .dark {
+    background-color: #151515;
+  }
+  .mid-dark-section {
+    min-height: 2315px;
+  }
+  .bottom-dark-section {
+    position: sticky;
+    min-height: 1799px;
+    top: 100%;
+  }
+</style>
