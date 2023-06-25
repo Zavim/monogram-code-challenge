@@ -1,4 +1,5 @@
 ---
+import OrangeSquare from "../components/OrangeSquare.astro";
 ---
 
 <html lang="en">
@@ -11,30 +12,82 @@
   </head>
   <body>
     <main>
-      <div class="hero-container">
-        <h1 class="section-header">jamstack</h1>
+      <div class="experience-container">
+        <div class="hero-container">
+          <h1 class="section-header">
+            <span>jamstack</span><span> </span><span>101</span>
+          </h1>
+          <p class="hero-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue
+            massa, tincidunt proin nunc viverra tristique tempor, ipsum. At
+            lectus vel pretium tempor ut dui vivamus sit.
+          </p>
+        </div>
+        <div class="orange-square-container">
+          <OrangeSquare />
+          <p class="orange-square-paragraph">
+            Statically generated pages are brought to life with client-side
+            JavaScript libraries and frameworks, such as Algolia and Next.js.
+          </p>
+        </div>
+        <div class="mid-dark-section dark">
+          <h2 class="section-header white-text centered-text">api</h2>
+          <p class="api-paragraph">
+            At build time, a Jamstack website uses data from one or more APIs to
+            generate markup. These APIs can be a headless CMS like Prismic, a
+            database like Supabase, or even a local JSON file!
+          </p>
+        </div>
+        <div class="markup-container">
+          <h2 class="section-header">markup</h2>
+          <p class="markup-paragraph">
+            When ready for deployment, a static-site generator such as Astro or
+            Next.js is used to compile the website. The end result is a
+            collection of pre-rendered HTML pages that can be delivered
+            lightning-fast over a CDN like Vercel’s Edge Network.
+          </p>
+        </div>
+        <div class="bottom-dark-section dark">
+          <div class="audit-scores-container">
+            <h3 class="scores-header">top audit scores</h3>
+            <div class="scores-circles-container">
+              <span>100</span>
+              <span>100</span>
+              <span>100</span>
+              <span>100</span>
+            </div>
+            <p class="scores-paragraph">
+              Search engines, business stakeholders, and end-users gauge a
+              website’s value using metric tools like Google Lighthouse, which
+              measures site performance, SEO, and accessibility. Performance is
+              one of the most difficult scores to get to 100. This is especially
+              true in a time when users demand JavaScript-heavy,
+              highly-interactive web experiences. A Jamstack website, delivering
+              SEO-friendly, lean & clean HTML in milliseconds, promises higher
+              search-engine ranking and a more positive, responsive end-user
+              experience.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="orange-square-container">
-        <h2 class="section-header white-text centered-text">javascript</h2>
-      </div>
-      <!-- <p>
-        Search engines, business stakeholders, and end-users gauge a website’s
-        value using metric tools like Google Lighthouse, which measures site
-        performance, SEO, and accessibility. Performance is one of the most
-        difficult scores to get to 100. This is especially true in a time when
-        users demand JavaScript-heavy, highly-interactive web experiences. A
-        Jamstack website, delivering SEO-friendly, lean & clean HTML in
-        milliseconds, promises higher search-engine ranking and a more positive,
-        responsive end-user experience.
-      </p> -->
-      <div class="mid-dark-section dark">
-        <h2 class="section-header white-text centered-text">api</h2>
-      </div>
-      <div class="markup-container">
-        <h2 class="section-header">markup</h2>
-      </div>
-      <div class="bottom-dark-section dark"></div>
     </main>
+    <footer>
+      <div class="footer-container dark">
+        <p>This is a design test by Zavier for Monogram.</p>
+        <svg
+          width="49"
+          height="42"
+          viewBox="0 0 49 42"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            class="footer-heart"
+            d="M24.6136 41.6136L4.90057 21.9006C3.32813 20.3281 2.27983 18.5 1.75568 16.4162C1.24432 14.3324 1.25071 12.2614 1.77486 10.2031C2.29901 8.1321 3.34091 6.32954 4.90057 4.79545C6.49858 3.22301 8.32031 2.18111 10.3658 1.66974C12.424 1.1456 14.4759 1.1456 16.5213 1.66974C18.5795 2.19389 20.4077 3.23579 22.0057 4.79545L24.6136 7.3267L27.2216 4.79545C28.8324 3.23579 30.6605 2.19389 32.706 1.66974C34.7514 1.1456 36.7969 1.1456 38.8423 1.66974C40.9006 2.18111 42.7287 3.22301 44.3267 4.79545C45.8864 6.32954 46.9283 8.1321 47.4524 10.2031C47.9766 12.2614 47.9766 14.3324 47.4524 16.4162C46.9411 18.5 45.8991 20.3281 44.3267 21.9006L24.6136 41.6136Z"
+            fill="#FF069C"></path>
+        </svg>
+      </div>
+    </footer>
   </body>
 </html>
 
@@ -63,19 +116,22 @@
   * {
     margin: 0;
   }
-  /* body {
-    height: 8057px;
-  } */
-  /* main {
-    width: min(1280px, 100% - 2rem);
-    margin-inline: auto;
-  } */
+  body {
+    overflow-x: hidden;
+  }
+  main {
+    /* width: min(1280px, 100% - 2rem);
+    margin-inline: auto; */
+    display: flex;
+    align-items: center;
+  }
   img,
   svg {
     max-width: 100%;
     display: block;
   }
   h1,
+  h1 > span,
   h2 {
     font-family: "Inter Black", sans-serif;
   }
@@ -85,9 +141,9 @@
   p {
     font-family: "Inter Light", sans-serif;
   }
-  .section-header {
-    font-size: 8.3215rem;
-    padding-top: 5.81rem;
+  .experience-container {
+    width: 85%;
+    /* margin: 0 7.5%; */
   }
   .white-text {
     color: #fff;
@@ -95,29 +151,98 @@
   .centered-text {
     text-align: center;
   }
+  .dark {
+    background-color: #151515;
+  }
+  .section-header {
+    font-size: 8.3215rem;
+    padding-top: 5.81rem;
+  }
+  .hero-paragraph {
+    color: #757575;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 195.5%;
+    letter-spacing: 0.00563rem;
+    margin-top: 2.75rem;
+  }
   .hero-container {
-    width: 93.5%;
+    /* width: 100%; */
     padding-left: min(126px, 8%);
   }
   .orange-square-container {
-    margin: auto;
-    min-height: 893px;
+    /* margin: auto; */
+    /* min-height: 893px;
     width: 92%;
-    background-color: orange;
+    background-color: orange; */
+  }
+  .orange-square-paragraph {
+    color: #fff;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 195.5%;
+    letter-spacing: 0.00563rem;
   }
   .markup-container {
     width: 100%;
     min-height: 78.6875rem;
   }
-  .dark {
-    background-color: #151515;
+  .markup-paragraph {
+    color: #414141;
+    font-size: 1.5rem;
+    line-height: 162%;
   }
   .mid-dark-section {
     min-height: 2315px;
+    width: 100vw;
+  }
+  .api-paragraph {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 162%;
   }
   .bottom-dark-section {
+    width: 100vw;
     position: sticky;
     min-height: 1799px;
     top: 100%;
+  }
+  .audit-scores-container {
+    border-radius: 68px;
+    background: linear-gradient(
+      346deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(123, 245, 93, 0.11) 100%
+    );
+    backdrop-filter: blur(60px);
+  }
+  .scores-header {
+    color: #efffe2;
+    text-align: center;
+    font-size: 4.75rem;
+    font-family: "Inter Black";
+    letter-spacing: -0.18525rem;
+  }
+  .scores-circles-container {
+    display: flex;
+  }
+  .scores-paragraph {
+    color: #c7c7c7;
+    font-size: 1.625rem;
+    line-height: 162%;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 9.75rem;
+  }
+  .footer-container > p {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 162%;
+    margin-bottom: 1.88rem;
   }
 </style>
