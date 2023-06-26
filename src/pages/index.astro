@@ -1,5 +1,6 @@
 ---
 import OrangeSquare from "../components/OrangeSquare.astro";
+import ScoresCircles from "../components/ScoresCircles.astro";
 ---
 
 <html lang="en">
@@ -25,7 +26,7 @@ import OrangeSquare from "../components/OrangeSquare.astro";
       </div>
       <div class="orange-square-container">
         <div class="orange-square-text-container">
-          <h2 class="orange-square-header white-text centered-text">
+          <h2 class="orange-square-header section-header centered-text">
             javascript
           </h2>
           <p class="orange-square-paragraph">
@@ -43,6 +44,16 @@ import OrangeSquare from "../components/OrangeSquare.astro";
           database like Supabase, or even a local JSON file!
         </p>
       </div>
+      <svg
+        class="squiggly-dark"
+        viewBox="0 0 1512 214"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0H1512V142.667C1512 142.667 1439 165.822 1302.5 165.822C1166 165.822 1036 104.946 821 104.946C606 104.946 484.5 214 304.5 214C124.5 214 0 142.667 0 142.667V0Z"
+          fill="#151515"></path>
+      </svg>
       <div class="markup-container">
         <h2 class="section-header">markup</h2>
         <p class="markup-paragraph">
@@ -55,22 +66,23 @@ import OrangeSquare from "../components/OrangeSquare.astro";
       <div class="bottom-dark-section dark">
         <div class="audit-scores-container">
           <h3 class="scores-header">top audit scores</h3>
-          <div class="scores-circles-container">
-            <span>100</span>
-            <span>100</span>
-            <span>100</span>
-            <span>100</span>
-          </div>
+          <ScoresCircles />
           <p class="scores-paragraph">
             Search engines, business stakeholders, and end-users gauge a
             website’s value using metric tools like Google Lighthouse, which
-            measures site performance, SEO, and accessibility. Performance is
-            one of the most difficult scores to get to 100. This is especially
-            true in a time when users demand JavaScript-heavy,
-            highly-interactive web experiences. A Jamstack website, delivering
-            SEO-friendly, lean & clean HTML in milliseconds, promises higher
-            search-engine ranking and a more positive, responsive end-user
-            experience.
+            measures site performance, SEO, and accessibility.
+          </p>
+          <br style="line-height: 162%" />
+          <p class="scores-paragraph">
+            Performance is one of the most difficult scores to get to 100. This
+            is especially true in a time when users demand JavaScript-heavy,
+            highly-interactive web experiences.
+          </p>
+          <br style="line-height: 162%" />
+          <p class="scores-paragraph">
+            A Jamstack website, delivering SEO-friendly, lean & clean HTML in
+            milliseconds, promises higher search-engine ranking and a more
+            positive, responsive end-user experience.
           </p>
         </div>
       </div>
@@ -113,13 +125,6 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     font-family: "Inter Black";
     src: url("/fonts/Inter-Black.woff");
     font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Inter Bold";
-    src: url("/fonts/Inter-Bold.woff");
-    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
@@ -182,12 +187,13 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     font-weight: 300;
     line-height: 195.5%;
     letter-spacing: 0.00563rem;
-    margin: 2.75rem 0 0 11.12rem;
+    margin: 2.75rem 0 0 3.87rem;
+    max-width: 34.3125rem;
   }
   .hero-container {
-    margin: 0 7.5%;
+    /* margin: 0 7.5%; */
     /* width: 100%; */
-    /* padding-left: min(126px, 8%); */
+    padding-left: 7.88rem;
   }
   .orange-square-container {
     display: flex;
@@ -211,9 +217,10 @@ import OrangeSquare from "../components/OrangeSquare.astro";
   }
   .orange-square-header {
     /* position: relative; */
-    /* padding: 0; */
+    line-height: 9.53125rem;
+    letter-spacing: -0.32419rem;
+    padding: 0;
     color: #fff;
-    font-size: 8.3215rem;
   }
   .orange-square-paragraph {
     color: #fff;
@@ -243,6 +250,10 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     text-align: center;
     font-size: 1.5rem;
     line-height: 162%;
+    padding: 3.94rem 26%;
+  }
+  .squiggly-dark {
+    width: 100%;
   }
   .bottom-dark-section {
     width: 100vw;
@@ -251,6 +262,7 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     top: 100%;
   }
   .audit-scores-container {
+    margin: 0 10%;
     border-radius: 68px;
     background: linear-gradient(
       346deg,
@@ -258,6 +270,7 @@ import OrangeSquare from "../components/OrangeSquare.astro";
       rgba(123, 245, 93, 0.11) 100%
     );
     backdrop-filter: blur(60px);
+    padding-bottom: 13.56rem;
   }
   .scores-header {
     color: #efffe2;
@@ -265,14 +278,19 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     font-size: 4.75rem;
     font-family: "Inter Black";
     letter-spacing: -0.18525rem;
+    padding-top: 7.5rem;
   }
-  .scores-circles-container {
-    display: flex;
+
+  .ellipse-glow {
+    /* width: 100%;
+    height: 100%; */
   }
   .scores-paragraph {
     color: #c7c7c7;
     font-size: 1.625rem;
     line-height: 162%;
+    padding: 0 18.5%;
+    opacity: 70%;
   }
   .footer-container {
     display: flex;
@@ -286,5 +304,12 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     font-size: 1.5rem;
     line-height: 162%;
     margin-bottom: 1.88rem;
+  }
+
+  @media (max-width: 35em) {
+    .section-header {
+      font-size: 3rem;
+      letter-spacing: -0.1rem;
+    }
   }
 </style>
