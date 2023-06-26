@@ -12,64 +12,69 @@ import OrangeSquare from "../components/OrangeSquare.astro";
   </head>
   <body>
     <main>
-      <div class="experience-container">
-        <div class="hero-container">
-          <h1 class="section-header">
-            <span>jamstack</span><span> </span><span>101</span>
-          </h1>
-          <p class="hero-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue
-            massa, tincidunt proin nunc viverra tristique tempor, ipsum. At
-            lectus vel pretium tempor ut dui vivamus sit.
-          </p>
-        </div>
-        <div class="orange-square-container">
-          <OrangeSquare />
+      <!-- <div class="experience-container"> -->
+      <div class="hero-container">
+        <h1 class="section-header">
+          <span>jamstack</span><span> </span><span>101</span>
+        </h1>
+        <p class="hero-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue
+          massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus
+          vel pretium tempor ut dui vivamus sit.
+        </p>
+      </div>
+      <div class="orange-square-container">
+        <div class="orange-square-text-container">
+          <h2 class="orange-square-header white-text centered-text">
+            javascript
+          </h2>
           <p class="orange-square-paragraph">
             Statically generated pages are brought to life with client-side
             JavaScript libraries and frameworks, such as Algolia and Next.js.
           </p>
         </div>
-        <div class="mid-dark-section dark">
-          <h2 class="section-header white-text centered-text">api</h2>
-          <p class="api-paragraph">
-            At build time, a Jamstack website uses data from one or more APIs to
-            generate markup. These APIs can be a headless CMS like Prismic, a
-            database like Supabase, or even a local JSON file!
-          </p>
-        </div>
-        <div class="markup-container">
-          <h2 class="section-header">markup</h2>
-          <p class="markup-paragraph">
-            When ready for deployment, a static-site generator such as Astro or
-            Next.js is used to compile the website. The end result is a
-            collection of pre-rendered HTML pages that can be delivered
-            lightning-fast over a CDN like Vercel’s Edge Network.
-          </p>
-        </div>
-        <div class="bottom-dark-section dark">
-          <div class="audit-scores-container">
-            <h3 class="scores-header">top audit scores</h3>
-            <div class="scores-circles-container">
-              <span>100</span>
-              <span>100</span>
-              <span>100</span>
-              <span>100</span>
-            </div>
-            <p class="scores-paragraph">
-              Search engines, business stakeholders, and end-users gauge a
-              website’s value using metric tools like Google Lighthouse, which
-              measures site performance, SEO, and accessibility. Performance is
-              one of the most difficult scores to get to 100. This is especially
-              true in a time when users demand JavaScript-heavy,
-              highly-interactive web experiences. A Jamstack website, delivering
-              SEO-friendly, lean & clean HTML in milliseconds, promises higher
-              search-engine ranking and a more positive, responsive end-user
-              experience.
-            </p>
+        <OrangeSquare />
+      </div>
+      <div class="mid-dark-section dark">
+        <h2 class="section-header white-text centered-text">api</h2>
+        <p class="api-paragraph">
+          At build time, a Jamstack website uses data from one or more APIs to
+          generate markup. These APIs can be a headless CMS like Prismic, a
+          database like Supabase, or even a local JSON file!
+        </p>
+      </div>
+      <div class="markup-container">
+        <h2 class="section-header">markup</h2>
+        <p class="markup-paragraph">
+          When ready for deployment, a static-site generator such as Astro or
+          Next.js is used to compile the website. The end result is a collection
+          of pre-rendered HTML pages that can be delivered lightning-fast over a
+          CDN like Vercel’s Edge Network.
+        </p>
+      </div>
+      <div class="bottom-dark-section dark">
+        <div class="audit-scores-container">
+          <h3 class="scores-header">top audit scores</h3>
+          <div class="scores-circles-container">
+            <span>100</span>
+            <span>100</span>
+            <span>100</span>
+            <span>100</span>
           </div>
+          <p class="scores-paragraph">
+            Search engines, business stakeholders, and end-users gauge a
+            website’s value using metric tools like Google Lighthouse, which
+            measures site performance, SEO, and accessibility. Performance is
+            one of the most difficult scores to get to 100. This is especially
+            true in a time when users demand JavaScript-heavy,
+            highly-interactive web experiences. A Jamstack website, delivering
+            SEO-friendly, lean & clean HTML in milliseconds, promises higher
+            search-engine ranking and a more positive, responsive end-user
+            experience.
+          </p>
         </div>
       </div>
+      <!-- </div> -->
     </main>
     <footer>
       <div class="footer-container dark">
@@ -90,6 +95,18 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     </footer>
   </body>
 </html>
+
+<style is:global>
+  .orange-square {
+    /* z-index: -1; */
+    width: 92.4%;
+    /* position: relative; */
+    /* top: 20rem; */
+    z-index: 0;
+    /* top: 82%; */
+    /* position: absolute; */
+  }
+</style>
 
 <style>
   @font-face {
@@ -122,8 +139,9 @@ import OrangeSquare from "../components/OrangeSquare.astro";
   main {
     /* width: min(1280px, 100% - 2rem);
     margin-inline: auto; */
-    display: flex;
+    /* display: flex;
     align-items: center;
+    justify-content: center; */
   }
   img,
   svg {
@@ -142,7 +160,7 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     font-family: "Inter Light", sans-serif;
   }
   .experience-container {
-    width: 85%;
+    /* width: 85%; */
     /* margin: 0 7.5%; */
   }
   .white-text {
@@ -164,17 +182,38 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     font-weight: 300;
     line-height: 195.5%;
     letter-spacing: 0.00563rem;
-    margin-top: 2.75rem;
+    margin: 2.75rem 0 0 11.12rem;
   }
   .hero-container {
+    margin: 0 7.5%;
     /* width: 100%; */
-    padding-left: min(126px, 8%);
+    /* padding-left: min(126px, 8%); */
   }
   .orange-square-container {
-    /* margin: auto; */
-    /* min-height: 893px;
-    width: 92%;
-    background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    transform: translateY(12rem);
+    /* top: 22.94rem; */
+    /* max-height: 100%; */
+    /* height: 100%; */
+    /* width: 92%; */
+  }
+  .orange-square-text-container {
+    position: absolute;
+    /* padding-top: 5.81rem; */
+    /* top: 17.6rem; */
+    top: 5.81rem;
+    z-index: 1;
+    /* margin-bottom: 100%; */
+  }
+  .orange-square-header {
+    /* position: relative; */
+    /* padding: 0; */
+    color: #fff;
+    font-size: 8.3215rem;
   }
   .orange-square-paragraph {
     color: #fff;
@@ -182,6 +221,8 @@ import OrangeSquare from "../components/OrangeSquare.astro";
     font-size: 1.125rem;
     line-height: 195.5%;
     letter-spacing: 0.00563rem;
+    padding: 2.75rem 13.65%;
+    z-index: 2;
   }
   .markup-container {
     width: 100%;
@@ -195,6 +236,7 @@ import OrangeSquare from "../components/OrangeSquare.astro";
   .mid-dark-section {
     min-height: 2315px;
     width: 100vw;
+    padding-top: 212.5rem;
   }
   .api-paragraph {
     color: #fff;
