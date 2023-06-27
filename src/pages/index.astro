@@ -1,4 +1,6 @@
 ---
+import JamstackContainer from "../components/JamstackContainer.astro";
+import RectanglesContainer from "../components/RectanglesContainer.astro";
 import OrangeSquare from "../components/OrangeSquare.astro";
 import ScoresCircles from "../components/ScoresCircles.astro";
 ---
@@ -15,9 +17,8 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     <main>
       <!-- <div class="experience-container"> -->
       <div class="hero-container">
-        <h1 class="section-header">
-          <span>jamstack</span><span> </span><span>101</span>
-        </h1>
+        <JamstackContainer />
+        <RectanglesContainer />
         <p class="hero-paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue
           massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus
@@ -109,6 +110,9 @@ import ScoresCircles from "../components/ScoresCircles.astro";
 </html>
 
 <style is:global>
+  * {
+    margin: 0;
+  }
   .orange-square {
     /* z-index: -1; */
     width: 92.4%;
@@ -135,9 +139,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-style: normal;
     font-display: swap;
   }
-  * {
-    margin: 0;
-  }
   body {
     overflow-x: hidden;
   }
@@ -154,7 +155,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     display: block;
   }
   h1,
-  h1 > span,
   h2 {
     font-family: "Inter Black", sans-serif;
   }
@@ -181,19 +181,19 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-size: 8.3215rem;
     padding-top: 5.81rem;
   }
+  .hero-container {
+    /* margin: 0 7.5%; */
+    /* width: 100%; */
+    padding-left: 7.88rem;
+  }
   .hero-paragraph {
     color: #757575;
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 195.5%;
     letter-spacing: 0.00563rem;
-    margin: 2.75rem 0 0 3.87rem;
+    margin: 2.75rem 0 44.38rem 3.87rem;
     max-width: 34.3125rem;
-  }
-  .hero-container {
-    /* margin: 0 7.5%; */
-    /* width: 100%; */
-    padding-left: 7.88rem;
   }
   .orange-square-container {
     display: flex;
