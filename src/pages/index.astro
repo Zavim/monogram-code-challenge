@@ -1,6 +1,5 @@
 ---
 import JamstackContainer from "../components/JamstackContainer.astro";
-import RectanglesContainer from "../components/RectanglesContainer.astro";
 import OrangeSquare from "../components/OrangeSquare.astro";
 import ScoresCircles from "../components/ScoresCircles.astro";
 ---
@@ -18,25 +17,13 @@ import ScoresCircles from "../components/ScoresCircles.astro";
       <!-- <div class="experience-container"> -->
       <div class="hero-container">
         <JamstackContainer />
-        <RectanglesContainer />
         <p class="hero-paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue
           massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus
           vel pretium tempor ut dui vivamus sit.
         </p>
       </div>
-      <div class="orange-square-container">
-        <div class="orange-square-text-container">
-          <h2 class="orange-square-header section-header centered-text">
-            javascript
-          </h2>
-          <p class="orange-square-paragraph">
-            Statically generated pages are brought to life with client-side
-            JavaScript libraries and frameworks, such as Algolia and Next.js.
-          </p>
-        </div>
-        <OrangeSquare />
-      </div>
+      <OrangeSquare />
       <div class="mid-dark-section dark">
         <h2 class="section-header white-text centered-text">api</h2>
         <p class="api-paragraph">
@@ -113,18 +100,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   * {
     margin: 0;
   }
-  .orange-square {
-    /* z-index: -1; */
-    width: 92.4%;
-    /* position: relative; */
-    /* top: 20rem; */
-    z-index: 0;
-    /* top: 82%; */
-    /* position: absolute; */
-  }
-</style>
-
-<style>
   @font-face {
     font-family: "Inter Black";
     src: url("/fonts/Inter-Black.woff");
@@ -139,6 +114,13 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-style: normal;
     font-display: swap;
   }
+  .section-header {
+    font-size: 8.3215rem;
+    /* padding-top: 5.81rem; */
+  }
+</style>
+
+<style>
   body {
     overflow-x: hidden;
   }
@@ -177,10 +159,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   .dark {
     background-color: #151515;
   }
-  .section-header {
-    font-size: 8.3215rem;
-    padding-top: 5.81rem;
-  }
   .hero-container {
     /* margin: 0 7.5%; */
     /* width: 100%; */
@@ -195,42 +173,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     margin: 2.75rem 0 44.38rem 3.87rem;
     max-width: 34.3125rem;
   }
-  .orange-square-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    transform: translateY(12rem);
-    /* top: 22.94rem; */
-    /* max-height: 100%; */
-    /* height: 100%; */
-    /* width: 92%; */
-  }
-  .orange-square-text-container {
-    position: absolute;
-    /* padding-top: 5.81rem; */
-    /* top: 17.6rem; */
-    top: 5.81rem;
-    z-index: 1;
-    /* margin-bottom: 100%; */
-  }
-  .orange-square-header {
-    /* position: relative; */
-    line-height: 9.53125rem;
-    letter-spacing: -0.32419rem;
-    padding: 0;
-    color: #fff;
-  }
-  .orange-square-paragraph {
-    color: #fff;
-    text-align: center;
-    font-size: 1.125rem;
-    line-height: 195.5%;
-    letter-spacing: 0.00563rem;
-    padding: 2.75rem 13.65%;
-    z-index: 2;
-  }
   .markup-container {
     width: 100%;
     min-height: 78.6875rem;
@@ -244,6 +186,10 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     min-height: 2315px;
     width: 100vw;
     padding-top: 212.5rem;
+    position: relative;
+    top: -12rem;
+    /* transform: translateY(-12rem); */
+    z-index: -1;
   }
   .api-paragraph {
     color: #fff;
