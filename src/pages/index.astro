@@ -76,16 +76,16 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     </main>
     <footer>
       <div class="footer-container dark">
-        <p>This is a design test by Zavier for Monogram.</p>
+        <p class="footer-paragraph">
+          This is a design test by Zavier for Monogram.
+        </p>
         <svg
-          width="49"
-          height="42"
+          class="footer-heart"
           viewBox="0 0 49 42"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            class="footer-heart"
             d="M24.6136 41.6136L4.90057 21.9006C3.32813 20.3281 2.27983 18.5 1.75568 16.4162C1.24432 14.3324 1.25071 12.2614 1.77486 10.2031C2.29901 8.1321 3.34091 6.32954 4.90057 4.79545C6.49858 3.22301 8.32031 2.18111 10.3658 1.66974C12.424 1.1456 14.4759 1.1456 16.5213 1.66974C18.5795 2.19389 20.4077 3.23579 22.0057 4.79545L24.6136 7.3267L27.2216 4.79545C28.8324 3.23579 30.6605 2.19389 32.706 1.66974C34.7514 1.1456 36.7969 1.1456 38.8423 1.66974C40.9006 2.18111 42.7287 3.22301 44.3267 4.79545C45.8864 6.32954 46.9283 8.1321 47.4524 10.2031C47.9766 12.2614 47.9766 14.3324 47.4524 16.4162C46.9411 18.5 45.8991 20.3281 44.3267 21.9006L24.6136 41.6136Z"
             fill="#FF069C"></path>
         </svg>
@@ -122,9 +122,24 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   }
   .section-header {
     font-size: 8.3215rem;
-    /* padding-top: 5.81rem; */
   }
+  /* mobile view */
   @media (max-width: 35em) {
+    .scores-header {
+      font-size: 3.17rem;
+    }
+    .hero-paragraph,
+    .orange-square-paragraph {
+      font-size: 0.75rem;
+    }
+    .api-paragraph,
+    .markup-paragraph,
+    .footer-paragraph {
+      font-size: 1rem;
+    }
+    .scores-paragraph {
+      font-size: 1.083rem;
+    }
     .section-header {
       font-size: 3rem;
       letter-spacing: -0.1rem;
@@ -176,26 +191,27 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     max-width: 34.3125rem;
   }
   .markup-container {
-    width: 100%;
-    padding-left: 8.34%;
+    /* width: 100%; */
+    margin: 25.75rem 0 42.37rem 8.34%;
+    /* padding-left: 8.34%; */
     /* min-height: 78.6875rem; */
   }
   .markup-paragraph {
     color: #414141;
     font-size: 1.5rem;
     line-height: 162%;
-    max-width: 30rem;
-    padding-top: 4.31rem;
+    width: min(31.75%, 30rem);
+    margin-top: 4.31rem;
   }
   /* I chose to shift this up along with the svg squiggle to sit under the orange square */
   .mid-dark-section {
     /* min-height: 2315px; */
     width: 100vw;
-    padding-top: 95.88rem;
+    padding-top: 95.87rem;
     position: relative;
     top: -12rem;
     /* transform: translateY(-12rem); */
-    z-index: -1;
+    /* z-index: -1; */
   }
   /* added left and right padding so the words are aligned exactly as the design */
   .api-paragraph {
@@ -203,7 +219,7 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     text-align: center;
     font-size: 1.5rem;
     line-height: 162%;
-    padding: 3.94rem 26%;
+    padding: 3.94rem 26% 25.75rem;
   }
   .squiggly-dark {
     width: 100%;
@@ -212,11 +228,14 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   }
   .bottom-dark-section {
     width: 100vw;
-    position: sticky;
-    min-height: 1799px;
-    top: 100%;
+    padding-bottom: 15.31rem;
+    /* position: sticky; */
+    /* min-height: 1799px; */
+    /* top: 100%; */
   }
   .audit-scores-container {
+    position: relative;
+    top: -5.37rem;
     margin: 0 10%;
     border-radius: 68px;
     background: linear-gradient(
@@ -249,10 +268,13 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     justify-content: center;
     padding-bottom: 9.75rem;
   }
-  .footer-container > p {
+  .footer-paragraph {
     color: #fff;
     font-size: 1.5rem;
     line-height: 162%;
     margin-bottom: 1.88rem;
+  }
+  .footer-heart {
+    width: min(3.5rem, 9.2%);
   }
 </style>
