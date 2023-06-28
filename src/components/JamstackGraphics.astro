@@ -1,99 +1,29 @@
 ---
 import mouse from "/images/mouse.svg";
-import mouseLine from "/images/mouse-line.svg";
-import rect1 from "/images/rect1.svg";
-import rect2 from "/images/rect2.svg";
-import transrect1 from "/images/transrect1.svg";
-import transrect2 from "/images/transrect2.svg";
+import rectangles from "/images/rectangles.png";
 ---
 
-<div class="mouse-container">
+<>
   <img
     class="mouse"
     src={mouse}
-    alt="computer mouse indicating the user to scroll down"
+    alt="computer mouse with dotted line leading down the page, indicating the user to scroll down"
   />
-  <img
-    class="mouse-line"
-    src={mouseLine}
-    alt="dotted line leading down the page"
-  />
-</div>
-
-<div class="rectangles-container">
-  <img class="rect1" src={rect1} alt="orange rounded rectangle" />
-  <img class="rect2" src={rect2} alt="orange rounded rectangle" />
-  <img
-    class="transrect1"
-    src={transrect1}
-    alt="transparent rounded rectangle"
-  />
-  <img
-    class="transrect2"
-    src={transrect2}
-    alt="transparent rounded rectangle"
-  />
-</div>
+  <!-- using img instead of svg because svg didn't preserve the blur on the transparent rects -->
+  <img class="rectangles" src={rectangles} alt="4 rounded rectangles" />
+</>
 
 <style>
-  .mouse-container {
+  .rectangles {
     position: absolute;
-    left: 24.6%;
-    top: 6.74%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    top: 0;
+    right: -1.75rem;
+    width: min(50.53%, 47.75rem);
   }
   .mouse {
     position: absolute;
-  }
-  .mouse-line {
-    position: absolute;
-    transform: translate(1rem, 2.2rem);
-  }
-  .rectangles-container {
-    position: absolute;
-    right: -1.85%;
-    /* top: 9.56rem; */
-    top: 1.89%;
-    width: 50%;
-    height: 63.76%;
-    max-width: 47.75rem;
-    max-height: 60.25rem;
-  }
-  /* doing all positioning and sizing in percentages to keep relative scale despite container size */
-  .rect1 {
-    position: absolute;
-    top: 17.74%;
-    right: 59.69%;
-    width: 36.65%;
-    /* top: 10.69rem; */
-    /* right: 28.5rem; */
-  }
-  .rect2 {
-    position: absolute;
-    /* right: 8.25rem; */
-    right: 17.28%;
-    width: 36.39%;
-  }
-  .transrect1 {
-    position: absolute;
-    /* right: 20rem; */
-    right: 41.88%;
-    top: 50.3%;
-    width: 36.65%;
-  }
-  .transrect2 {
-    position: absolute;
-    right: 0%;
-    top: 31.34%;
-    width: 36.65%;
-  }
-  .transrect1,
-  .transrect2 {
-    border-radius: 4.25rem;
-    /* border-radius: 19% / 19%; */
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(3.75rem);
+    left: 24.6%;
+    width: min(3rem, 5.0625rem);
+    top: 128.69%;
   }
 </style>

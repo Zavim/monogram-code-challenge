@@ -1,5 +1,7 @@
 ---
 import JamstackContainer from "../components/JamstackContainer.astro";
+import JamstackGraphics from "../components/JamstackGraphics.astro";
+
 import OrangeSquare from "../components/OrangeSquare.astro";
 import ScoresCircles from "../components/ScoresCircles.astro";
 ---
@@ -21,6 +23,7 @@ import ScoresCircles from "../components/ScoresCircles.astro";
           massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus
           vel pretium tempor ut dui vivamus sit.
         </p>
+        <JamstackGraphics />
       </div>
       <OrangeSquare />
       <div class="mid-dark-section dark">
@@ -179,6 +182,7 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     /* margin: 0 7.5%; */
     /* width: 100%; */
     padding-left: 8.34%;
+    position: relative;
   }
   /* I try to get as close as possible to the Figma design, the decimals very specific */
   .hero-paragraph {
