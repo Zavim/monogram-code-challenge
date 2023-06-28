@@ -2,13 +2,7 @@
 ---
 
 <style>
-  @font-face {
-    font-family: "Inter Bold";
-    src: url("/fonts/Inter-Bold.woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
+  /* fun with flex, makes aligning these very easy */
   .scores-circles-container {
     display: flex;
     justify-content: space-between;
@@ -19,11 +13,12 @@
   .scores-circle {
     width: 100%;
     height: 100%;
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  /* this part was the most fun with the svgs, they really come alive with the gradients */
   .score {
     position: absolute;
     font-family: "Inter Bold";
@@ -37,12 +32,7 @@
 <div class="scores-circles-container">
   <div class="scores-circle">
     <span class="score">100</span>
-    <svg
-      class="ellipse-glow"
-      viewBox="0 0 338 338"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 338 338" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g opacity="0.8" filter="url(#filter0_ddd_101_247)">
         <path
           d="M275 169C275 141.861 264.591 115.756 245.917 96.0635C227.244 76.3707 201.728 64.5903 174.628 63.1496C147.527 61.7089 120.906 70.7175 100.25 88.3194C79.5935 105.921 66.4752 130.776 63.5978 157.761C60.7204 184.747 68.3031 211.809 84.7836 233.37C101.264 254.932 125.387 269.351 152.182 273.657C178.977 277.963 206.403 271.828 228.809 256.515C251.215 241.203 266.895 217.879 272.617 191.351"

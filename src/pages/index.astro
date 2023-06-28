@@ -14,7 +14,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   </head>
   <body>
     <main>
-      <!-- <div class="experience-container"> -->
       <div class="hero-container">
         <JamstackContainer />
         <p class="hero-paragraph">
@@ -74,7 +73,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
           </p>
         </div>
       </div>
-      <!-- </div> -->
     </main>
     <footer>
       <div class="footer-container dark">
@@ -97,6 +95,7 @@ import ScoresCircles from "../components/ScoresCircles.astro";
 </html>
 
 <style is:global>
+  /* I try to have as little global styling as possible and focus on what makes the most sense here */
   * {
     margin: 0;
   }
@@ -104,6 +103,13 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-family: "Inter Black";
     src: url("/fonts/Inter-Black.woff");
     font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter Bold";
+    src: url("/fonts/Inter-Bold.woff");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
@@ -118,18 +124,17 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-size: 8.3215rem;
     /* padding-top: 5.81rem; */
   }
+  @media (max-width: 35em) {
+    .section-header {
+      font-size: 3rem;
+      letter-spacing: -0.1rem;
+    }
+  }
 </style>
 
 <style>
   body {
     overflow-x: hidden;
-  }
-  main {
-    /* width: min(1280px, 100% - 2rem);
-    margin-inline: auto; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
   }
   img,
   svg {
@@ -140,16 +145,10 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   h2 {
     font-family: "Inter Black", sans-serif;
   }
-  span {
-    font-family: "Inter Bold", sans-serif;
-  }
   p {
     font-family: "Inter Light", sans-serif;
   }
-  .experience-container {
-    /* width: 85%; */
-    /* margin: 0 7.5%; */
-  }
+  /*--- utility classes ---*/
   .white-text {
     color: #fff;
   }
@@ -159,11 +158,14 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   .dark {
     background-color: #151515;
   }
+  /*--- utility classes ---*/
+
   .hero-container {
     /* margin: 0 7.5%; */
     /* width: 100%; */
-    padding-left: 7.88rem;
+    padding-left: 8.34%;
   }
+  /* I try to get as close as possible to the Figma design, the decimals very specific */
   .hero-paragraph {
     color: #757575;
     font-size: 1.125rem;
@@ -175,22 +177,27 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   }
   .markup-container {
     width: 100%;
-    min-height: 78.6875rem;
+    padding-left: 8.34%;
+    /* min-height: 78.6875rem; */
   }
   .markup-paragraph {
     color: #414141;
     font-size: 1.5rem;
     line-height: 162%;
+    max-width: 30rem;
+    padding-top: 4.31rem;
   }
+  /* I chose to shift this up along with the svg squiggle to sit under the orange square */
   .mid-dark-section {
-    min-height: 2315px;
+    /* min-height: 2315px; */
     width: 100vw;
-    padding-top: 212.5rem;
+    padding-top: 95.88rem;
     position: relative;
     top: -12rem;
     /* transform: translateY(-12rem); */
     z-index: -1;
   }
+  /* added left and right padding so the words are aligned exactly as the design */
   .api-paragraph {
     color: #fff;
     text-align: center;
@@ -200,6 +207,8 @@ import ScoresCircles from "../components/ScoresCircles.astro";
   }
   .squiggly-dark {
     width: 100%;
+    position: relative;
+    top: -12rem;
   }
   .bottom-dark-section {
     width: 100vw;
@@ -226,11 +235,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     letter-spacing: -0.18525rem;
     padding-top: 7.5rem;
   }
-
-  .ellipse-glow {
-    /* width: 100%;
-    height: 100%; */
-  }
   .scores-paragraph {
     color: #c7c7c7;
     font-size: 1.625rem;
@@ -250,12 +254,5 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-size: 1.5rem;
     line-height: 162%;
     margin-bottom: 1.88rem;
-  }
-
-  @media (max-width: 35em) {
-    .section-header {
-      font-size: 3rem;
-      letter-spacing: -0.1rem;
-    }
   }
 </style>

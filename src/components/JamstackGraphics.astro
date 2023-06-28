@@ -56,13 +56,17 @@ import transrect2 from "/images/transrect2.svg";
     right: -2%;
     /* top: 9.56rem; */
     top: 1.89%;
-    min-width: 47.75rem;
-    min-height: 60.25rem;
+    width: 50%;
+    height: 63.76%;
+    max-width: 47.75rem;
+    max-height: 60.25rem;
   }
+  /* doing all positioning and sizing in percentages to keep relative scale despite container size */
   .rect1 {
     position: absolute;
     top: 17.74%;
     right: 59.69%;
+    width: 36.65%;
     /* top: 10.69rem; */
     /* right: 28.5rem; */
   }
@@ -70,21 +74,25 @@ import transrect2 from "/images/transrect2.svg";
     position: absolute;
     /* right: 8.25rem; */
     right: 17.28%;
+    width: 36.39%;
   }
   .transrect1 {
     position: absolute;
     /* right: 20rem; */
     right: 41.88%;
     top: 50.3%;
+    width: 36.65%;
   }
   .transrect2 {
     position: absolute;
     right: 0%;
     top: 31.34%;
+    width: 36.65%;
   }
   .transrect1,
   .transrect2 {
     border-radius: 4.25rem;
+    /* border-radius: 19% / 19%; */
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(3.75rem);
   }
