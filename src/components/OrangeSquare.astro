@@ -11,15 +11,15 @@ import computerArrow from "/images/computer-arrow.svg";
     align-items: center;
     /* justify-content: space-around; */
     position: relative;
-    /* transform: translateY(12rem); */
-    /* top: 22.94rem; */
+    /* top: 44.38rem; 710.08*/
+    /* top: 10%; */
     /* max-height: 100%; */
     /* height: 100%; */
     /* width: 92%; */
   }
   .orange-square {
     /* z-index: -1; */
-    width: 92.4%;
+    width: 92.39%;
     /* top: 20rem; */
     z-index: 1;
     /* top: 82%; */
@@ -27,15 +27,19 @@ import computerArrow from "/images/computer-arrow.svg";
   }
   .orange-square-text-container {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* padding-top: 5.81rem; */
     /* top: 17.6rem; */
-    top: 5.81rem;
+    top: 10.41%;
+    /* top: 5.81rem; */
     z-index: 2;
     /* margin-bottom: 100%; */
   }
   .orange-square-header {
-    /* position: relative; */
     font-family: "Inter Black";
+    text-align: center;
     line-height: 9.53125rem;
     letter-spacing: -0.32419rem;
     padding: 0;
@@ -65,6 +69,31 @@ import computerArrow from "/images/computer-arrow.svg";
     top: 30%;
     right: 11.07%;
     z-index: 1;
+  }
+  @media (max-width: 35em) {
+    .orange-square {
+      /* transform: scaleY(1.5); */
+    }
+    .orange-square-text-container {
+      top: 7.5%;
+    }
+    .orange-square-header {
+      font-size: 5rem;
+      line-height: normal;
+    }
+    .orange-square-paragraph {
+      margin: 2.5% auto 4.9%;
+      max-width: 70%;
+    }
+    .computer {
+      top: 70%;
+    }
+    .computer-arrow {
+      top: 48%;
+      right: 6%;
+      width: 15%;
+      rotate: 30deg;
+    }
   }
 </style>
 

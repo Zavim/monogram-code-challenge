@@ -17,13 +17,22 @@ import rectangles from "/images/rectangles.png";
   .rectangles {
     position: absolute;
     top: 0;
-    right: -1.75rem;
+    right: max(-2%, -1.75rem);
     width: min(50.53%, 47.75rem);
   }
   .mouse {
     position: absolute;
     left: 24.6%;
-    width: min(3rem, 5.0625rem);
+    width: 5.0625rem;
     top: 128.69%;
+  }
+  @media (max-width: 35em) {
+    .mouse {
+      top: 110%;
+      width: 2rem;
+    }
+    .rectangles {
+      top: 80%;
+    }
   }
 </style>

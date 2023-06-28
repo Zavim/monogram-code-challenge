@@ -4,16 +4,31 @@ import JamstackGraphics from "./JamstackGraphics.astro";
 ---
 
 <style>
+  .jamstack-container {
+    width: min(64.3%, 51.4375rem);
+  }
   .jamstack-header {
     height: 100%;
+    margin-bottom: min(14.37%, 2.75rem);
   }
-  .jamstack-header-container {
-    margin-top: 9.56rem;
-    width: min(64.3%, 51.4375rem);
+  .hero-paragraph {
+    color: #757575;
+    font-family: "Inter Light", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 195.5%;
+    letter-spacing: 0.00563rem;
+    margin-left: min(7.5%, 3.87rem);
+    max-width: 34.3125rem;
   }
 </style>
 
-<div class="jamstack-header-container">
+<div class="jamstack-container">
   <img class="jamstack-header" src={jamstackHeader} alt="jamstack 101" />
+  <p class="hero-paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue massa,
+    tincidunt proin nunc viverra tristique tempor, ipsum. At lectus vel pretium
+    tempor ut dui vivamus sit.
+  </p>
 </div>
 <!-- <JamstackGraphics /> -->
