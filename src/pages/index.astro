@@ -3,6 +3,8 @@ import JamstackContainer from "../components/JamstackContainer.astro";
 import MarkupContainer from "../components/MarkupContainer.astro";
 import OrangeSquare from "../components/OrangeSquare.astro";
 import ScoresCircles from "../components/ScoresCircles.astro";
+
+import orb from "/images/orb.png";
 ---
 
 <html lang="en">
@@ -26,6 +28,13 @@ import ScoresCircles from "../components/ScoresCircles.astro";
           generate markup. These APIs can be a headless CMS like Prismic, a
           database like Supabase, or even a local JSON file!
         </p>
+        <div class="orb-container">
+          <img
+            class="orb"
+            src={orb}
+            alt="sphere with supabase and prismic written on its surface"
+          />
+        </div>
         <svg
           class="squiggly-dark"
           viewBox="0 0 1512 214"
@@ -128,6 +137,7 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     }
     .scores-paragraph {
       font-size: 1.083rem;
+      padding: 0 12%;
     }
     .section-header {
       font-size: 2.07rem;
@@ -135,6 +145,18 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     }
     .hero-container {
       margin: 10.028% 0 75%;
+    }
+    .mid-dark-section {
+      padding-top: 80%;
+    }
+    .audit-scores-container {
+      top: -2vh;
+      margin: 0 5%;
+      border-radius: 34px;
+    }
+    .scores-header {
+      font-size: 1.78rem;
+      letter-spacing: -0.1rem;
     }
   }
 </style>
@@ -192,7 +214,19 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     text-align: center;
     font-size: 1.5rem;
     line-height: 162%;
-    padding: 3.94rem 26% 25.75rem;
+    padding: 8.4% 26% 54.7%;
+  }
+  .orb-container {
+    display: flex;
+    justify-content: center;
+  }
+  .orb {
+    position: absolute;
+    /* top: 121.5rem; */
+    width: 70%;
+    top: 84%;
+    left: 11%;
+    z-index: 2;
   }
   .squiggly-dark {
     width: 100%;
@@ -224,7 +258,8 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-size: 4.75rem;
     font-family: "Inter Black";
     letter-spacing: -0.18525rem;
-    padding-top: 7.5rem;
+    /* padding-top: 7.5rem; */
+    padding-top: 9%;
   }
   .scores-paragraph {
     color: #c7c7c7;
