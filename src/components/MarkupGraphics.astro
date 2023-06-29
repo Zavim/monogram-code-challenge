@@ -1,0 +1,30 @@
+---
+import toppledBlocks from "/images/toppled-blocks.png";
+import blockRectangles from "/images/block-rectangles.png";
+import blocksWall from "/images/blocks-wall.png";
+---
+
+<>
+  <img src={toppledBlocks} class="toppled" alt="colored blocks falling" />
+  <img src={blockRectangles} class="rectangles" alt="colored blocks falling" />
+  <img src={blocksWall} class="wall" alt="wall of colored rounded blocks" />
+</>
+
+<style>
+  .rectangles {
+    position: absolute;
+    top: min(1.02rem, 1.3%);
+    right: max(-2%, -1.5rem);
+    width: min(50.53%, 47.75rem);
+  }
+  .toppled {
+    position: absolute;
+    top: max(42.8%, 33.69rem);
+    left: max(-4.5%, -3.88rem);
+  }
+  .wall {
+    position: absolute;
+    left: -8.34vw;
+    bottom: 0;
+  }
+</style>

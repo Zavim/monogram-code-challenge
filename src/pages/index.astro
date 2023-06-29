@@ -1,7 +1,6 @@
 ---
 import JamstackContainer from "../components/JamstackContainer.astro";
-import JamstackGraphics from "../components/JamstackGraphics.astro";
-
+import MarkupContainer from "../components/MarkupContainer.astro";
 import OrangeSquare from "../components/OrangeSquare.astro";
 import ScoresCircles from "../components/ScoresCircles.astro";
 ---
@@ -18,7 +17,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     <main>
       <div class="hero-container">
         <JamstackContainer />
-        <JamstackGraphics />
       </div>
       <OrangeSquare />
       <div class="mid-dark-section dark">
@@ -39,15 +37,7 @@ import ScoresCircles from "../components/ScoresCircles.astro";
             fill="#151515"></path>
         </svg>
       </div>
-      <div class="markup-container">
-        <h2 class="section-header">markup</h2>
-        <p class="markup-paragraph">
-          When ready for deployment, a static-site generator such as Astro or
-          Next.js is used to compile the website. The end result is a collection
-          of pre-rendered HTML pages that can be delivered lightning-fast over a
-          CDN like Vercel’s Edge Network.
-        </p>
-      </div>
+      <MarkupContainer />
       <div class="bottom-dark-section dark">
         <div class="audit-scores-container">
           <h3 class="scores-header">top audit scores</h3>
@@ -119,6 +109,7 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     font-display: swap;
   }
   .section-header {
+    font-family: "Inter Black", sans-serif;
     font-size: 8.3215rem;
   }
   /* mobile view */
@@ -194,19 +185,6 @@ import ScoresCircles from "../components/ScoresCircles.astro";
     top: -12rem;
     /* transform: translateY(-12rem); */
     /* z-index: -1; */
-  }
-  .markup-container {
-    /* width: 100%; */
-    margin: 25.75rem 0 42.37rem 8.34%;
-    /* padding-left: 8.34%; */
-    /* min-height: 78.6875rem; */
-  }
-  .markup-paragraph {
-    color: #414141;
-    font-size: 1.5rem;
-    line-height: 162%;
-    width: min(31.75%, 30rem);
-    margin-top: 4.31rem;
   }
   /* added left and right padding so the words are aligned exactly as the design */
   .api-paragraph {
