@@ -51,7 +51,7 @@ function Text({ ...props }) {
 
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(0.75), //this creates a range between -+x/2
-    y: THREE.MathUtils.randFloatSpread(height + index), //offset height by the index to inroduce more variation
+    y: THREE.MathUtils.randFloatSpread(height), //offset height by the index to inroduce more variation
   });
 
   useFrame((_state, delta) => {
