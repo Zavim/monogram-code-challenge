@@ -1,4 +1,5 @@
 ---
+import FloatingTextContainer from "../components/FloatingTextContainer.astro";
 import JamstackContainer from "../components/JamstackContainer.astro";
 import MarkupContainer from "../components/MarkupContainer.astro";
 import OrangeSquare from "../components/OrangeSquare.astro";
@@ -35,6 +36,7 @@ import orb from "/images/orb.png";
             alt="sphere with supabase and prismic written on its surface"
           />
         </div>
+        <FloatingTextContainer />
         <svg
           class="squiggly-dark"
           viewBox="0 0 1512 214"
@@ -210,11 +212,13 @@ import orb from "/images/orb.png";
   }
   /* added left and right padding so the words are aligned exactly as the design */
   .api-paragraph {
+    position: relative;
     color: #fff;
     text-align: center;
     font-size: 1.5rem;
     line-height: 162%;
     padding: 8.4% 26% 54.7%;
+    z-index: 3;
   }
   .orb-container {
     display: flex;
