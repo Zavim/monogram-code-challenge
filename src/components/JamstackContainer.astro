@@ -18,7 +18,10 @@ import JamstackGraphics from "./JamstackGraphics.astro";
     font-weight: 300;
     line-height: 195.5%;
     letter-spacing: 0.00563rem;
-    margin-left: min(7.5%, 3.87rem);
+    margin-left: min(
+      7.5%,
+      3.87rem
+    ); /* min is really useful for responsive design, it prevents me from writing too many media queries*/
     max-width: 34.3125rem;
   }
 </style>

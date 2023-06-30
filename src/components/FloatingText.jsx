@@ -10,6 +10,7 @@ function Texts() {
   let data = [];
   for (let i = 0; i < count; i++) {
     const { width, height } = viewport.getCurrentViewport(camera, [0, 0, 0]);
+    // get the size of the viewport to spawn text at appropriate width and height
     data.push({
       position: [0, 0, 0],
       width: width,
@@ -20,6 +21,7 @@ function Texts() {
   return (
     <group position={[0, 0, 0]}>
       {data.map((props, i) => (
+        // create 8 Text objects to float up the canvas
         <Text key={i} {...props} />
       ))}
     </group>
@@ -29,6 +31,7 @@ function Texts() {
 function Text({ ...props }) {
   const [glowing, setGlowing] = useState(false);
   const c = new THREE.Color();
+  //click a logo to set the glow effect -- the hitboxes are very finnicky, would fix with more time
   const height = props.height;
   const width = props.width;
   const index = props.index;
@@ -48,7 +51,7 @@ function Text({ ...props }) {
 
   const [data] = useState({
     x: THREE.MathUtils.randFloatSpread(0.75), //this creates a range between -+x/2
-    y: THREE.MathUtils.randFloatSpread(height + index),
+    y: THREE.MathUtils.randFloatSpread(height + index), //offset height by the index to inroduce more variation
   });
 
   useFrame((_state, delta) => {

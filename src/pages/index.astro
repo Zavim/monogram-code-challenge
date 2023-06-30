@@ -23,7 +23,7 @@ import orb from "/images/orb.png";
       </div>
       <OrangeSquare />
       <div class="mid-dark-section dark">
-        <h2 class="section-header white-text centered-text">api</h2>
+        <h2 class="api-header section-header centered-text">api</h2>
         <p class="api-paragraph">
           At build time, a Jamstack website uses data from one or more APIs to
           generate markup. These APIs can be a headless CMS like Prismic, a
@@ -181,9 +181,6 @@ import orb from "/images/orb.png";
     font-family: "Inter Light", sans-serif;
   }
   /*--- utility classes ---*/
-  .white-text {
-    color: #fff;
-  }
   .centered-text {
     text-align: center;
   }
@@ -193,8 +190,6 @@ import orb from "/images/orb.png";
   /*--- utility classes ---*/
 
   .hero-container {
-    /* margin: 0 7.5%; */
-    /* width: 100%; */
     margin: 10.028% 0 44.38rem;
     padding-left: 8.34%;
     position: relative;
@@ -202,15 +197,18 @@ import orb from "/images/orb.png";
   /* I try to get as close as possible to the Figma design, the decimals very specific */
   /* I chose to shift this up along with the svg squiggle to sit under the orange square */
   .mid-dark-section {
-    /* min-height: 2315px; */
     width: 100vw;
     padding-top: 101.5%;
     position: relative;
     top: -12rem;
-    /* transform: translateY(-12rem); */
-    /* z-index: -1; */
   }
   /* added left and right padding so the words are aligned exactly as the design */
+  .api-header {
+    color: #fff;
+    position: relative;
+    z-index: 3;
+  }
+  /* using percentages whenever sensible to help with responsiveness later */
   .api-paragraph {
     position: relative;
     color: #fff;
@@ -226,7 +224,6 @@ import orb from "/images/orb.png";
   }
   .orb {
     position: absolute;
-    /* top: 121.5rem; */
     width: 70%;
     top: 84%;
     left: 11%;
@@ -239,9 +236,6 @@ import orb from "/images/orb.png";
   .bottom-dark-section {
     width: 100vw;
     padding-bottom: 15.31rem;
-    /* position: sticky; */
-    /* min-height: 1799px; */
-    /* top: 100%; */
   }
   .audit-scores-container {
     position: relative;
@@ -262,7 +256,6 @@ import orb from "/images/orb.png";
     font-size: 4.75rem;
     font-family: "Inter Black";
     letter-spacing: -0.18525rem;
-    /* padding-top: 7.5rem; */
     padding-top: 9%;
   }
   .scores-paragraph {

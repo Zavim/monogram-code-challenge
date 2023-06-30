@@ -2,6 +2,7 @@
 import FloatingText from "./FloatingText";
 ---
 
+<!-- I like to use react-three-fiber for threejs development -->
 <style>
   .floating-text-container {
     height: 100%;
@@ -11,6 +12,7 @@ import FloatingText from "./FloatingText";
   }
 </style>
 
+<!-- nesting the React component into Astro lets me keep the same workflow across the project -->
 <div class="floating-text-container">
   <FloatingText client:only="react" />
 </div>
